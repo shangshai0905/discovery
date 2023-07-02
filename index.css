@@ -121,7 +121,6 @@ ul li a:hover:before, ul.menu li a:hover:before{
     text-align: center;
     color: #fff;
     cursor: pointer;
-
 }
 .carousel-search select option{
     background-color: rgb(97, 97, 97);
@@ -134,10 +133,11 @@ ul li a:hover:before, ul.menu li a:hover:before{
     overflow: hidden;
     position: relative;
     z-index: 1;
+    border: 2px solid rgb(124, 23, 23);
+    border-radius: 25px;
 }
 .carousel-search .searchbtn:hover {
     background-color: transparent;
-    letter-spacing: 0.15em;
 }
 
 .carousel-icon {
@@ -194,15 +194,14 @@ ul li a:hover:before, ul.menu li a:hover:before{
     overflow: hidden;
     position: relative;
     z-index: 1;
-    outline-color: rgb(124, 23, 23);
-    outline-width: 25px;
-    outline-style: auto;
-    font-weight: bold;
+    border: 2px solid rgb(124, 23, 23);
+    border-radius: 0.375rem;
 }
 .collection .btn:hover {
     letter-spacing: 0.20em;
     background-color: transparent;
     box-shadow: 0 0 25px rgb(124, 23, 23);
+    color: #fff;
 }
 .collection .btn::before, .searchbtn::before {
     content: "";
@@ -267,6 +266,9 @@ ul li a:hover:before, ul.menu li a:hover:before{
     overflow: hidden;
     position: relative;
     z-index: 1;
+    border: 2px solid rgb(124, 23, 23);
+    border-radius: 0.375rem;
+
 }
 .parallax-container .btn:hover, .foodie-container .btn:hover {
     letter-spacing: 0.20em;
