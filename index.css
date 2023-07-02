@@ -1,0 +1,1103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+}
+.logo {
+    width: 230px;
+}
+nav .navbar-brand {
+    padding: 0;
+}
+.navbar-nav span {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -1px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.menu span {
+    color: black;
+}
+.nav-item .arrow {
+    font-size: 15px;
+}
+.nav-item a {
+    text-align: center;
+}
+.topnav .icon {
+    display: none;
+    color: black;
+}
+ul:hover li{
+    opacity: .2;
+    filter: blur(2px);
+}
+ul li:hover {
+    opacity: 1;
+    filter: blur(0px);
+}
+ul li {
+    position: relative;
+}
+ul.list li a::before{
+    content: " ";
+    background-color: rgb(124, 23, 23);
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    height: 2px;
+    width: 0;
+    transition: 0.3s ease-in-out;
+}
+ul.menu li a::before {
+    content: " ";
+    background-color: rgb(124, 23, 23);
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    height: 1.5px;
+    width: 0;
+    transition: 0.3s ease-in-out;
+}
+ul li a:hover:before, ul.menu li a:hover:before{
+    width: 100%;
+}
+
+
+
+.carousel-item img {
+    width: 100%;
+}
+.carousel-item {
+    position: relative;
+}
+.carousel-caption {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    color: #fff; /* Adjust the text color as needed */
+}
+.carousel-caption h3 {
+    font-size: 100px;
+    letter-spacing: -5px;
+}
+.carousel-caption p {
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+.carousel-image {
+    position: relative;
+}
+
+.carousel-search {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 5;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    height: 50px;
+    background-color: rgba(15, 15, 15, 0.3);
+    color: #dfdbdb;
+    font-size: 15px;
+}
+.carousel-search .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-search select {
+    background-color: transparent;
+    user-select: none;
+    border: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+
+}
+.carousel-search select option{
+    background-color: rgb(97, 97, 97);
+}
+.carousel-search .searchbtn {
+    font-size: 15px;
+    color: white;
+    transition: 0.3s;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.carousel-search .searchbtn:hover {
+    background-color: transparent;
+    letter-spacing: 0.15em;
+}
+
+.carousel-icon {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+  }
+
+.carousel-control-prev-icon {
+    left: 0;
+}
+
+.carousel-control-next-icon {
+    right: 0;
+}
+
+
+.collection {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 200px 1fr;
+    grid-template-areas:
+    "coll coll coll"
+    "primea discovery kip";
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.coll {
+    grid-area: coll;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+.primea {
+    grid-area: primea;
+    padding: 20px;
+}
+.discovery {
+    grid-area: discovery;
+    padding: 20px;
+}
+.kipkin {
+    grid-area: kip;
+    padding: 20px;
+}
+
+.collection .btn {
+    color: rgb(124, 23, 23);
+    transition: 0.3s;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    outline-color: rgb(124, 23, 23);
+    outline-width: 25px;
+    outline-style: auto;
+    font-weight: bold;
+}
+.collection .btn:hover {
+    letter-spacing: 0.20em;
+    background-color: transparent;
+    box-shadow: 0 0 25px rgb(124, 23, 23);
+}
+.collection .btn::before, .searchbtn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color:rgb(124, 23, 23) ;
+    z-index: -1;
+    transition: 0.6s;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.5,0.4,0.7);
+}
+.collection .btn:hover::before, .searchbtn:hover::before {
+    transform: scaleX(1);
+}
+.collection img {
+    width: 40px;
+}
+.collection img.bg {
+    display: none;
+}
+.collection h3 {
+    font-size: 35px;
+    font-weight: bolder;
+}
+.collection p {
+    font-size: 15px;
+}
+.collection h6 {
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+
+.parallax-container .long img, .parallax-container .wander img {
+    width: 100%;
+    height: 100%;
+}
+.parallax-container .wander-content, .parallax-container .long-content {
+    position: absolute;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.parallax-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "long wander";
+    position: relative;
+}
+.parallax-container .btn, .foodie-container .btn {
+    color: white;
+    transition: 0.3s;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.parallax-container .btn:hover, .foodie-container .btn:hover {
+    letter-spacing: 0.20em;
+    background-color: transparent;
+    box-shadow: 0 0 25px rgb(124, 23, 23);
+    color: #fff;
+}
+.parallax-container .btn::before, .foodie-container .btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color:rgb(124, 23, 23) ;
+    z-index: -1;
+    transition: 0.6s;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.5,0.4,0.7);
+}
+.parallax-container .btn:hover::before, .foodie-container .btn:hover::before {
+    transform: scaleX(1);
+}
+.long {
+    grid-area: long;
+    position: relative;
+    width: 100%;
+}
+.wander {
+    grid-area: wander;
+    position: relative;
+    width: 100%;
+}
+.parallax-container h3{
+    font-weight: bolder;
+}
+
+.box {
+    background-color:transparent;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    grid-column: 1 / 3;
+    z-index: 50;
+    position: absolute; /* Add this line to position .box inside .parallax-container */
+    top: 50%; /* Position the .box vertically in the center */
+    left: 50%; /* Position the .box horizontally in the center */
+    transform: translate(-50%, -50%);
+}
+
+.contents {
+    position: absolute;
+    inset: 28px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover .contents img {
+    opacity: 0;
+}
+.contents h2 {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+  
+
+
+.discoveries-section {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.discoveries {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.discoveries .btn, .loyalty .btn {
+    color: rgb(124, 23, 23);
+    transition: 0.3s;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    outline-color: rgb(124, 23, 23);
+    outline-width: 25px;
+    outline-style: auto;
+    font-weight: bold;
+}
+.discoveries .btn:hover, .loyalty .btn:hover {
+    letter-spacing: 0.15em;
+    background-color: transparent;
+    box-shadow: 0 0 25px rgb(124, 23, 23);
+    color: #fff;
+}
+.discoveries .btn::before, .loyalty .btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color:rgb(124, 23, 23) ;
+    z-index: -1;
+    transition: 0.6s;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.5,0.4,0.7);
+}
+.discoveries .btn:hover::before, .loyalty .btn:hover::before {
+    transform: scaleX(1);
+}
+
+.discoveries .col-12 {
+    width: 50%;
+}
+.discoveries .row {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.foodie-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "foodie celeb";
+}
+.foodie {
+    grid-area: foodie;
+    position: relative;
+    width: 100%;
+}
+.celeb {
+    grid-area: celeb;
+    position: relative;
+    width: 100%;
+}
+.foodie-container .foodie img, .foodie-container .celeb img {
+    width: 100%;
+    height: 100%;
+}
+.foodie-container .foodie .img-content, .foodie-container .celeb .img-content {
+    position: absolute;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+.img-content h3 {
+    font-weight: bolder;
+    font-size: 30px;
+}
+.img-content h6 {
+    font-weight:lighter;
+}
+
+
+.loyalty-section {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loyalty .col-12 {
+    width: 80%;
+}
+.loyalty .col-12 h3 {
+    font-weight: bolder;
+    color: rgb(124, 23, 23);
+    font-size: 30px;
+}
+.loyalty .row {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "ab dc mp press explore";
+    background-color: #6e0023;
+    padding: 20px;
+    color: #fff;
+}
+footer div {
+    margin: 10px;
+    padding-top: 20px;
+    border-top: 2px solid rgb(211, 210, 210, 0.5);
+}
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+footer ul li a{
+    text-decoration: none;
+}
+footer ul li:not(:first-child) a {
+    font-weight: lighter;
+    color: rgb(211, 210, 210, 0.9);
+}
+footer ul li:first-child{
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+.ab {
+    grid-area: ab;
+}
+.dc {
+    grid-area: dc;
+}
+.mp {
+    grid-area: mp;
+}
+.press {
+    grid-area: press;
+}
+.explore {
+    grid-area: explore;
+}
+
+
+    @media screen and (min-width:1590px){
+        .offcanvas-body .container {
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (max-width: 1289px) {
+        .collection h3 {
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .collection p {
+            font-size: 13px;
+        }
+        .collection h6 {
+            font-size: 20px;
+            letter-spacing: 5px;
+        }
+        .collection .btn {
+            font-size: 13px;
+        }
+        .collection {
+            grid-template-columns: 33.33% 33.33% 33.33%;
+            grid-template-rows: 150px 1fr;
+            grid-template-areas:
+            "coll coll coll"
+            "primea discovery kip";
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    @media screen and (max-width: 1100px) {
+        .collection h3 {
+            font-size: 25px;
+            font-weight: bolder;
+        }
+        .collection p {
+            font-size: 13px;
+        }
+        .collection h6 {
+            font-size: 15px;
+            letter-spacing: 5px;
+        }
+        .collection {
+            grid-template-columns: 33.33% 33.33% 33.33%;
+            grid-template-rows: 150px 1fr;
+            grid-template-areas:
+            "coll coll coll"
+            "primea discovery kip";
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    @media screen and (min-width: 691px) {
+        .collection {
+            background-image: url(images/collection3.png);
+            background-position: center;
+            background-size:100%;
+            background-repeat: no-repeat;
+            grid-template-columns: 33.33% 33.33% 33.33%;
+            grid-template-rows: 150px 1fr;
+            grid-template-areas:
+            "coll coll coll"
+            "primea discovery kip";
+        }
+        .parallax1 img.bg {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        .collection {
+            grid-template-columns: 33.33% 33.33% 33.33%;
+            grid-template-rows: 180px 1.5fr;
+            grid-template-areas:
+            "coll coll coll"
+            "primea discovery kip";
+        }
+    }
+    @media screen and (max-width: 945px) {
+        .parallax-container h3{
+            font-size: 20px;
+        }
+        .parallax-container p{
+            font-size: 13px;
+        }
+        .parallax-container button {
+            font-size: 13px;
+        }
+        .discoveries .row button{
+            font-size: 20px;
+        }
+        .discoveries .row p{
+            font-size: 15px;
+        }
+    }
+
+    @media screen and (min-width: 887px) and (max-width: 897px) {
+        .carousel-search {
+            font-size: 12px;
+        }
+        .carousel-search .searchbtn {
+            font-size: 12px;
+        }
+    }
+
+    @media screen and (max-width: 886px) {
+        .navbar-nav span {
+            font-size: 15px;
+        }
+        .carousel-search {
+            font-size: 12px;
+        }
+        .carousel-search .searchbtn {
+            font-size: 12px;
+        }
+        ul.menu li.res a::before, ul.menu li.deals a::before, ul.menu li.dis a::before {
+            content: " ";
+            background-color: rgb(124, 23, 23);
+            position: absolute;
+            left: 0;
+            bottom: 30px;
+            height: 1.5px;
+            width: 0;
+            transition: 0.3s ease-in-out;
+        }
+        ul.menu li.res a:hover:before, ul.menu li.deals a:hover:before, ul.menu li.dis a:hover:before {
+            width: 100%;
+        }
+
+        .carousel-caption h3 {
+            font-size: 50px;
+        }
+        .carousel-caption p {
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 870px){
+        .foodie-container .foodie .img-content, .foodie-container .celeb .img-content {
+            margin-bottom: 30px;
+        }
+        .foodie-container h3 {
+            font-size: 20px;
+        }
+        .foodie-container h6 {
+            font-size: 13px;
+        }
+        .foodie-container button {
+            font-size: 13px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .navbar-nav span {
+            font-size: 15px;
+        }
+    }
+
+    @media screen and (max-width: 773px) {
+        .carousel-search {
+            height: 60px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        nav .offcanvas.offcanvas-end.show {
+            width: 50%;
+            transition: 0.5s;
+        }
+        nav .offcanvas.offcanvas-end.show a{
+            transition: 0.5s;
+        }
+        nav .offcanvas-body .navbar-nav {
+            display: flex;
+            flex-direction: row;
+        }
+        nav .offcanvas-body .top .col {
+            display: flex;
+            justify-content: center;
+        }
+        nav .offcanvas-body .top .list {
+            width: 100%;
+            justify-content: space-evenly;
+        }
+        nav .offcanvas-body .navbar-nav.menu {
+            flex-direction: column;
+        }
+        nav .offcanvas-body .bottom .col {
+            display: flex;
+            justify-content: center;
+        }
+        nav .offcanvas-body .list a {
+            padding-right: 8px;
+        }
+        nav .offcanvas-body .bottom li {
+            padding: 25px;
+        }
+
+        nav .offcanvas-body ul.menu li a::before {
+            content: " ";
+            background-color: rgb(124, 23, 23);
+            position: absolute;
+            left: 0;
+            bottom: 15px;
+            height: 1.5px;
+            width: 0;
+            transition: 0.3s ease-in-out;
+        }
+        nav .offcanvas-body ul.menu li a:hover:before{
+            width: 100%;
+        }
+        .carousel .btnpax {
+            position: absolute;
+            top:5%;
+            right: 0%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            color: #dfdbdb;
+            font-size: 20px;
+        }
+        .modal-backdrop {
+            z-index: 999999;
+        }
+        .discoveries .row button{
+            font-size: 15px;
+        }
+        .discoveries .row p{
+            font-size: 13px;
+        }
+        .foodie-container {
+            grid-template-columns: auto;
+            grid-template-rows: repeat(2, 400px);
+            grid-template-areas:
+            "foodie"
+            "celeb";
+        }
+        .loyalty .col-12 h3 {
+            font-size: 20px;
+        }
+        .loyalty .col-12 p {
+            font-size: 13px;
+        }
+        .loyalty button {
+            font-size: 13px;
+        }
+        footer ul li:not(:first-child){
+            font-size: 10px;
+        }
+        footer ul li:first-child{
+            font-size: 13px;
+        }
+    }
+    @media screen and (max-width: 690px) and (max-height:849px) {
+        .parallax1 {
+            background-image: none;
+            height: auto;
+        }
+        .collection {
+            grid-template-columns: auto;
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas:
+            "coll"
+            "primea"
+            "discovery"
+            "kip";
+        }
+        .kipkin, .discovery, .primea, .coll {
+            display: flex;
+            align-items: center;
+        }
+        .coll {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .coll .bg {
+            background-color: #fff;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+        }
+        .coll, .primea, .discovery, .kipkin {
+            position: relative;
+            width: 100%;
+            padding: 0;
+        }
+        .collection h3 {
+            font-size: 25px;
+        }
+        .collection p {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .collection h6 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .parallax1 {
+            position: relative;
+            width: 100%;
+        }
+        .collection img {
+            width: 40px;
+        }
+        .collection img.bg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .collection .coll-content, .primea-content, .discovery-content, .kipkin-content {
+            position: absolute;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+    }
+    @media screen and (max-width: 546px) and (max-height:849px) {
+        .collection h3 {
+            font-size: 20px;
+        }
+        .collection p {
+            font-size: 10px;
+        }
+        .collection h6 {
+            font-size: 15px;
+        }
+        .collection button {
+            font-size: 10px;
+        }
+    }
+    @media screen and (max-width: 460px) and (max-height:849px) {
+        .collection h3 {
+            font-size: 20px;
+        }
+        .collection p {
+            font-size: 10px;
+        }
+        .collection h6 {
+            font-size: 15px;
+        }
+        .collection button {
+            font-size: 10px;
+        }
+        .collection img {
+            width: 30px;
+        }
+        .collection img.bg {
+            height: 300px;
+        }
+    }
+
+    @media screen and (max-width: 690px) and (min-height:850px) {
+        .parallax1 {
+            background-image: url(images/collection4.png);
+            background-position: center;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .collection {
+            grid-template-columns: auto;
+            grid-template-rows: 150px, repeat(3, 220px);
+            grid-template-areas:
+            "coll"
+            "primea"
+            "discovery"
+            "kip";
+        }
+        .coll {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (max-width: 690px) and (min-height:978px)  and (max-height:1330px){
+        .parallax {
+            background-image: url(images/long-weekend2.png);
+            background-position: center;
+            background-size: 100% 80%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .parallax-container {
+            grid-template-columns: 100%;
+            grid-template-rows:repeat(2, 550px);
+            grid-template-areas:
+            "long"
+            "wander";
+            align-items: center;
+        }
+        .parallax-container img {
+            display: none;
+        }
+        .parallax-container h3{
+            font-size: 25px;
+        }
+        .parallax-container p{
+            font-size: 15px;
+        }
+        .parallax-container button {
+            font-size: 15px;
+        }
+        .parallax-container .box {
+            display: none;
+        }
+    }
+    @media screen and (max-width:1000px){
+        .box {
+            width: 150px;
+            height: 150px;
+        }
+        .contents h2 {
+            font-size: 30px;
+        }
+    }
+    @media screen and (max-width:850px){
+        .box {
+            width: 120px;
+            height: 120px;
+        }
+        .contents h2 {
+            font-size: 25px;
+        }
+    }
+    @media screen and (max-width: 689px) and (max-height:977px){
+        .parallax {
+            background-image: none; 
+            height: auto;
+        }
+        .parallax-container img {
+            display: block;
+        }
+        .parallax-container {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+            "long"
+            "wander";
+        }
+        .parallax-container h3 {
+            font-size: 25px;
+        }
+        .parallax-container p {
+            font-size: 15px;
+        }
+        .parallax-container .box {
+            display: block;
+        }
+        .parallax-container .long-content {
+            bottom: 50%;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        .contents h2 {
+            font-size: 40px;
+        }
+    }
+    
+
+    @media screen and (max-width: 599px) {
+        nav .offcanvas.offcanvas-end.show {
+            width: 70%;
+        }
+        .carousel-search {
+            font-size: 10px;
+        }
+        .carousel-search .searchbtn {
+            font-size: 10px;
+        }
+        .discoveries .col-12 {
+            width: 80%;
+        }
+
+
+    }
+    @media screen and (max-width: 547px){
+        .carousel-caption h3 {
+            font-size: 30px;
+        }
+        .carousel-caption p {
+            font-size: 10px;
+        }
+        .parallax-container h3{
+            font-size: 15px;
+        }
+        .parallax-container p{
+            font-size: 10px;
+        }
+        .parallax-container button {
+            font-size: 10px;
+        }
+        .box {
+            width: 180px;
+            height: 180px;
+        }
+        .contents h2 {
+            font-size: 40px;
+        }
+    }
+    @media screen and (max-width: 473px) {
+        footer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr, 100px;
+            grid-template-areas:
+            "ab dc mp"
+            "press none explore";
+        }
+    }
+    @media screen and (max-width: 441px) {
+        nav .offcanvas.offcanvas-end.show {
+            width: 100%;
+        }
+        .logo {
+            width: 200px;
+        }
+        .carousel-search {
+            font-size: 8px;
+        }
+        .carousel-search .searchbtn {
+            font-size: 8px;
+        }
+        .parallax-container h3{
+            font-size: 15px;
+        }
+        .parallax-container p{
+            font-size: 10px;
+        }
+        .parallax-container button {
+            font-size: 10px;
+        }
+        .discoveries .row button{
+            font-size: 12px;
+        }
+        .discoveries .row p{
+            font-size: 12px;
+        }        
+
+        .box {
+            width: 150px;
+            height: 150px;
+        }
+        .contents h2 {
+            font-size: 30px;
+        }
+    }
+    @media screen and (max-width:380px) {
+        .parallax-container .long-content {
+            bottom: 30%;
+        }
+    }
+    @media screen and (max-width: 317px) {
+        footer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 200px 100px;
+            grid-template-areas:
+            "ab dc"
+            "mp press"
+            "explore none";
+        }
+    }
+
+    @media screen and (max-width: 310px) {
+        .navbar-nav span {
+            font-size: 15px;
+        }
+        .box {
+            width: 120px;
+            height: 120px;
+        }
+        .contents h2 {
+            font-size: 25px;
+        }
+        .logo {
+            width: 150px;
+        }
+
+    }
+
+    @media screen and (max-width: 245px) {
+        .logo {
+            width: 120px;
+        }
+
+    }
