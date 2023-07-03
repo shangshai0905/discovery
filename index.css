@@ -83,7 +83,6 @@ ul li a:hover:before, ul.menu li a:hover:before{
 }
 .carousel-caption h3 {
     font-size: 100px;
-    letter-spacing: -5px;
 }
 .carousel-caption p {
     font-size: 30px;
@@ -107,19 +106,27 @@ ul li a:hover:before, ul.menu li a:hover:before{
     color: #dfdbdb;
     font-size: 15px;
 }
+.carousel-search a {
+    color: #dfdbdb;
+}
+.carousel-search a:hover {
+    color: #fff;
+}
 .carousel-search .search {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.carousel-search select:hover {
+    color: #fff;
+}
 .carousel-search select {
     background-color: transparent;
     user-select: none;
     border: 0;
     width: 100%;
     text-align: center;
-    color: #fff;
+    color: #dfdbdb;
     cursor: pointer;
 }
 .carousel-search select option{
@@ -1076,6 +1083,9 @@ footer ul li:first-child{
     @media screen and (max-width:380px) {
         .parallax-container .long-content {
             bottom: 30%;
+        }
+        form .col-auto {
+            padding: 5px;
         }
     }
     @media screen and (max-width: 317px) {
