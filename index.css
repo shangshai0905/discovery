@@ -1123,7 +1123,16 @@ footer ul li:first-child{
         .logo {
             width: 150px;
         }
+    }
 
+    @media screen and (max-width: 280px) {
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+        .contents h2 {
+            font-size: 20px;
+        }
     }
 
     @media screen and (max-width: 245px) {
@@ -1134,5 +1143,27 @@ footer ul li:first-child{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: 1fr 200px 150px;
+        }
+        .box {
+            width: 80px;
+            height: 80px;
+        }
+        .contents h2 {
+            font-size: 18px;
+        }
+        .parallax-container .long-content, .parallax-container .wander-content {
+            padding: 0px;
+        }
+        .parallax-container h3 {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        .parallax-container p {
+            font-size: 10px;
+            margin-bottom: 5px;
+        }
+        .parallax-container button {
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
     }
