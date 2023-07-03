@@ -479,10 +479,10 @@ ul li a:hover:before, ul.menu li a:hover:before{
 
 footer {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas:
-    "ab dc mp press explore";
+    "ab dc mp press explore reservations";
     background-color: #6e0023;
     padding: 20px;
     color: #fff;
@@ -521,6 +521,9 @@ footer ul li:first-child{
 }
 .explore {
     grid-area: explore;
+}
+.reservations {
+    grid-area: reservations;
 }
 
 
@@ -1033,14 +1036,14 @@ footer ul li:first-child{
             font-size: 40px;
         }
     }
-    @media screen and (max-width: 473px) {
+    @media screen and (max-width: 600px) {
         footer {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr, 100px;
             grid-template-areas:
             "ab dc mp"
-            "press none explore";
+            "press explore reservations";
         }
     }
     @media screen and (max-width: 441px) {
@@ -1088,15 +1091,21 @@ footer ul li:first-child{
             padding: 5px;
         }
     }
-    @media screen and (max-width: 317px) {
+    @media screen and (max-width: 340px) {
         footer {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: 1fr 200px 100px;
+            grid-template-rows: 1fr 180px 150px;
             grid-template-areas:
             "ab dc"
             "mp press"
-            "explore none";
+            "explore reservations";
+        }
+        footer a {
+            font-size: 10px;
+        }
+        footer ul li:first-child {
+            font-size: 10px;
         }
     }
 
@@ -1121,5 +1130,9 @@ footer ul li:first-child{
         .logo {
             width: 120px;
         }
-
+        footer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 200px 150px;
+        }
     }
